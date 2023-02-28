@@ -1,15 +1,6 @@
 name: Deploy Project
 on: 
-  pull_request:
-    types:
-      - opened
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-      - 'dev-*'
-      - 'feature/**'
-    
+  workflow_dispatch:    
 jobs:
   test:
     runs-on: ubuntu-latest
