@@ -5,13 +5,20 @@ on:
     branches:
       - main
 jobs:
-  Hello:
+  Build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello FL
-        run : echo "Hello FL"
-  Bye:
+      - name: Building the code
+        run : echo "Building the code"
+  Test:
     runs-on: ubuntu-latest
     steps:
-      - name: Bye FL
-        run : echo "Bye FL"
+      - name: Testing the code
+        run : echo "Testing the code"
+        
+  Deploy:
+    needs: [Test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying the code
+        run : echo "Deploying the code"
