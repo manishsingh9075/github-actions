@@ -1,0 +1,17 @@
+name: Testing Github Actions
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  Hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello FL
+        run : echo "Hello FL"
+  Bye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bye FL
+        run : echo "Bye FL"
