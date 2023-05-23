@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   Build:
-    runs-on: self-hosted
+    runs-on: ip-10-0-1-200
     steps:
       - name: Building the code
-        run : echo "Building the code"
+        run : echo $HOSTNAME
