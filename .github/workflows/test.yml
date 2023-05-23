@@ -6,19 +6,7 @@ on:
       - main
 jobs:
   Build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Building the code
         run : echo "Building the code"
-  Test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Testing the code
-        run : echo "Testing the code"
-        
-  Deploy:
-    needs: [Test]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploying the code
-        run : echo "Deploying the code"
